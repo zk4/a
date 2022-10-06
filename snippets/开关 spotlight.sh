@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/git/a/.base.sh
+source ~/git/a/core/.base.sh
 # -------------------------------------------
 
 input flick "开或关(on|off)" 
