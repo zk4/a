@@ -3,7 +3,7 @@
 <img src="https://see.fontimg.com/api/renderfont4/514Pa/eyJyIjoiZnMiLCJoIjoxMTYsInciOjEwMDAsImZzIjoxMTYsImZnYyI6IiNERjE2REUiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/YWN0aW9u/crescendo.png" alt="Art Deco fonts"> 
 </p>
 
-the simplest, yet powerful autocomplete tool for command line with fzf
+The simplest, yet powerful autocomplete tool for command line with fzf
 
 ![demo](https://zk4bucket.oss-cn-beijing.aliyuncs.com/uPic/demo.gif)
 
@@ -17,12 +17,12 @@ the simplest, yet powerful autocomplete tool for command line with fzf
 
 4. You are ready to go
 
-# make your own snippet 
+# make your own action
 
-pure code logic. code anything in any language you want, put them in snippets if you like.
+Pure code logic. code anything in any language you want, put them in snippets if you like.
 
 
-## write sh 
+## write an action
 core/.base.sh supply some simple funtion for common bash usage. you can check out the demo sh file.
 
 
