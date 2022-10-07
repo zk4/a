@@ -17,6 +17,13 @@ It follows the intuitive way to write reusable code. No magic.
 3. Set ${pwd}/action/bin in your PATH, you are ready to go.
 
 
+# Quick start
+Have fun with the built-in actions
+```bash
+> action
+```
+
+
 
 # Make your own action
 
