@@ -87,7 +87,7 @@ echo -e ${Yellow}$1${NC}
 # Function to display commands
 exe() { echo "\$ $@" ; "$@" ; }
 
-input(){
+color_input(){
   # 读取输入
   # $1 赋值参数
   # $2 提示
@@ -99,7 +99,7 @@ input(){
 }
 
 # no color, but simple
-input2(){
+simple_input(){
   read -p "$1" var
   echo ${var/#\~/$HOME} 
 }
@@ -108,7 +108,7 @@ input2(){
 # using fzf as input source
 # $1: "iput description" ex: "remote branch"
 # $2: cmd line sequence, ex: git branch -r 
-input_fzf(){
+fzf_input(){
   title=$1
   shift 1
   $@ | fzf --header=$title --header-first

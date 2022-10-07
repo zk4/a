@@ -26,7 +26,7 @@ It follows the intuitive way to write reusable code. No magic.
 
 
 ## Write an action in sh 
-util/base.sh supplies some useful wrapper funtion for common bash usage.  EX: color ouput ,easy input.
+
 
 
 
@@ -70,13 +70,48 @@ du -h -d 2 $directory | gsort -h
 
 
 
-## Tips
+## Input Variable 
 
 Variable could be input typing, also could be fzf list or any other source. Use you imagination.
 
-Ex: variable from fzf list
+util/base.sh supplies 3 useful input wrapper funtions for common bash usage.  
+
+
+
+**simple input**
+
+Simple as it is, robust but without color.
+
+![image-20221007145459152](https://zk4bucket.oss-cn-beijing.aliyuncs.com/uPic/image-20221007145459152.png)
+
+```bash
+directory=$(simple_input "文件夹位置: ")
+```
+
+
+
+**color input**
+
+color input is a bit tricky. If you input may represent a relative path, you should always add this code `localBranch="${localBranch/#\~/$HOME}"`, otherwie ~ won't expand because of input is a pure string.
+
+![image-20221007144734144](https://zk4bucket.oss-cn-beijing.aliyuncs.com/uPic/image-20221007144734144.png)
+
+``` bash
+color_input localBranch "本地分支名" 
+localBranch="${localBranch/#\~/$HOME}"
+```
+
+
+
+**fzf input**
 
 ![2022-10-07 14.35.32](https://zk4bucket.oss-cn-beijing.aliyuncs.com/uPic/2022-10-07%2014.35.32.gif)
+
+```bash
+remoteBranch=`fzf_input "远程分支名" git branch -r`
+```
+
+
 
 ## Similar tools
 
