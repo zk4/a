@@ -123,3 +123,10 @@ remoteBranch=`fzf_input "远程分支名" git branch -r`
 ## Similar tools
 
 [beavr](https://github.com/denisidoro/beavr), [bro](https://github.com/hubsmoke/bro), [cheat](https://github.com/cheat/cheat), [cheat.sh](https://github.com/chubin/cheat.sh), [cmdmenu](https://github.com/amacfie/cmdmenu), [eg](https://github.com/srsudar/eg), [how2](https://github.com/santinic/how2), [howdoi](https://github.com/gleitz/howdoi)  [tldr](https://github.com/tldr-pages/tldr), [navi](https://github.com/denisidoro/navi)
+
+
+## reference 
+https://seb.jambor.dev/posts/improving-shell-workflows-with-fzf/
+
+
+
