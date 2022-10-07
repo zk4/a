@@ -14,3 +14,11 @@ minikube addons list
 
 # check context
 kubectl config get-contexts
+
+kubectl get no
+
+# check cluster info 
+kubectl cluster-info
+
+# 罗列某名称空间的 serect 
+kubectl get  secret -n kubernetes-dashboard
