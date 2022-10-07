@@ -31,6 +31,7 @@ Have fun with the built-in actions
 
 2. Code some script in any language you want, put them in ${pwd}/actions/.
 
+3. chmod the file, done.
 
 ## Write an action in sh 
 
@@ -72,6 +73,7 @@ directory=$(input2 "文件夹位置: ")
 du -h -d 2 $directory | gsort -h
 
 ```
+
 
 ![2022-10-07 12.01.35](https://zk4bucket.oss-cn-beijing.aliyuncs.com/uPic/2022-10-07%2012.01.35.gif)
 
