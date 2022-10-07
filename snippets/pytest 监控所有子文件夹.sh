@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/git/a/core/.base.sh
+source "$(dirname "$0")/../core/.base.sh"
 # -------------------------------------------
 
 watchexec -rce py 'pytest -s'
