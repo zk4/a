@@ -11,8 +11,14 @@ The simplest, yet powerful autocomplete tool for command line with fzf.
 
 # How to use 
 1. Install [fzf](https://github.com/junegunn/fzf) first. 
-2. Set ${pwd}/action/bin in your PATH, you are ready to go.
+2. Install [bat](https://github.com/sharkdp/bat) for colorize. 
+3. Set ${pwd}/action/bin in your PATH, you are ready to go.
 
+Mac Tips:
+``` bash
+brew install fzf
+brew install bat
+```
 # Make your own action
 
 1. Fork this repo.
