@@ -74,6 +74,10 @@ du -h -d 2 $directory | gsort -h
 
 Variable could be input typing, also could be fzf list or any other source. Use you imagination.
 
+Ex: variable from fzf list
+
+![2022-10-07 14.35.32](https://zk4bucket.oss-cn-beijing.aliyuncs.com/uPic/2022-10-07%2014.35.32.gif)
+
 ## Similar tools
 
 [beavr](https://github.com/denisidoro/beavr), [bro](https://github.com/hubsmoke/bro), [cheat](https://github.com/cheat/cheat), [cheat.sh](https://github.com/chubin/cheat.sh), [cmdmenu](https://github.com/amacfie/cmdmenu), [eg](https://github.com/srsudar/eg), [how2](https://github.com/santinic/how2), [howdoi](https://github.com/gleitz/howdoi)  [tldr](https://github.com/tldr-pages/tldr), [navi](https://github.com/denisidoro/navi)

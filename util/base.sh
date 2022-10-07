@@ -104,3 +104,12 @@ input2(){
   echo ${var/#\~/$HOME} 
 }
 
+
+# using fzf as input source
+# paramter 1: "iput description"
+# paramter 2: cmd line
+input_fzf(){
+  title=$1
+  shift 1
+  $@ | fzf --header=$title --header-first
+}
