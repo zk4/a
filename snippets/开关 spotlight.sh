@@ -1,5 +1,5 @@
 #!/bin/bash
-source "$(dirname "$0")/../core/.base.sh"
+source "$(dirname "$0")/../util/base.sh"
 # -------------------------------------------
 
 input flick "开或关(on|off)" 

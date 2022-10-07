@@ -16,8 +16,10 @@ the simplest, yet powerful autocomplete tool for command line with fzf
 # make your own snippet 
 
 pure code logic. code anything in any language you want, put them in snippets if you like.
-.base.sh supply some simple funtion for common bash usage. you can check out the demo sh file.
 
+
+## write sh 
+core/.base.sh supply some simple funtion for common bash usage. you can check out the demo sh file.
 
 
 

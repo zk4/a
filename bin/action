@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+# get current script folder 
+SCRIPT_DIR=`dirname $(readlink $0)`
+
+# make snippets folder path
+ACTION_SNIPPETS_ROOT=$SCRIPT_DIR/../snippets/
+
+bash -e "$ACTION_SNIPPETS_ROOT$(ls $ACTION_SNIPPETS_ROOT  | fzf  --height 40% --layout=reverse  --border  --preview "bat --style=numbers --color=always --line-range :500 $ACTION_SNIPPETS_ROOT{}")"
+
+
+
