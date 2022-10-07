@@ -1,7 +1,15 @@
 #!/bin/bash
 
-ACTION_ROOT=/Users/zk/git/a/snippets/
-bash -e "/Users/zk/git/a/snippets/$(ls /Users/zk/git/a/snippets/  | fzf  --height 40% --layout=reverse  --border  --preview 'bat --style=numbers --color=always --line-range :500 /Users/zk/git/a/snippets/{}')"
+
+# get current script folder 
+SCRIPT_DIR=`dirname $(readlink $0)`
+
+# make snippets folder path
+ACTION_SNIPPETS_ROOT=$SCRIPT_DIR/../snippets/
+
+echo $ACTION_SNIPPETS_ROOT
+
+bash -e "$ACTION_SNIPPETS_ROOT$(ls $ACTION_SNIPPETS_ROOT  | fzf  --height 40% --layout=reverse  --border  --preview 'bat --style=numbers --color=always --line-range :500 $ACTION_SNIPPETS_ROOT{}')"
 
 
 

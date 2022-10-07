@@ -84,13 +84,23 @@ yellow(){
 echo -e ${Yellow}$1${NC}
 }
 
-# 读取输入
-# $1 赋值参数
-# $2 提示
-red "参数：不支持在 input 里扩展符,请在命令里自行转换, EX: var=\"\${var/#\~/\$HOME}\""
-red "------------------"
+# Function to display commands
+exe() { echo "\$ $@" ; "$@" ; }
 
 input(){
-echo -e $2 ${UGreen}$1${NC}:
-read $1
+  # 读取输入
+  # $1 赋值参数
+  # $2 提示
+  red "参数：不支持在 input 里扩展符,请在命令里自行转换, EX: var=\"\${var/#\~/\$HOME}\""
+  red "------------------"
+  echo -e $2
+  echo -e ${UGreen}$1${NC}:
+  read $1
 }
+
+# no color, but simple
+input2(){
+  read -p "$1" var
+  echo ${var/#\~/$HOME} 
+}
+
