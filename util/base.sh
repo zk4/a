@@ -106,8 +106,8 @@ input2(){
 
 
 # using fzf as input source
-# paramter 1: "iput description"
-# paramter 2: cmd line
+# $1: "iput description" ex: "remote branch"
+# $2: cmd line sequence, ex: git branch -r 
 input_fzf(){
   title=$1
   shift 1
