@@ -14,6 +14,7 @@ It follows the intuitive way to write reusable code. No magic.
 # How to use 
 1. Install [fzf](https://github.com/junegunn/fzf) first. 
 2. Install [bat](https://github.com/sharkdp/bat) for colorize. 
+3. `chmod -R 777 ${pwd}/actions`
 3. Set ${pwd}/action/bin in your PATH, you are ready to go.
 
 
