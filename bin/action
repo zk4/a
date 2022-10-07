@@ -7,7 +7,7 @@ SCRIPT_DIR=`dirname $(readlink $0)`
 # make snippets folder path
 ACTIONS_FOLDER=$SCRIPT_DIR/../actions/
 
-bash -e "$ACTIONS_FOLDER$(ls $ACTIONS_FOLDER  | fzf  --height 40% --layout=reverse  --border  --preview "bat --style=numbers --color=always --line-range :500 $ACTIONS_FOLDER{}")"  2>/dev/null 
+bash -e "$ACTIONS_FOLDER$(ls $ACTIONS_FOLDER  | fzf  --height 40% --layout=reverse  --border  --preview "bat --style=numbers --color=always --line-range :500 $ACTIONS_FOLDER{}")" 
 
 
 
