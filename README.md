@@ -4,6 +4,8 @@
 </p>
 The simplest, yet powerful autocomplete tool for command line with fzf. 
 
+It follows the intuitive way to write reusable code. No magic. 
+
 
 
 ![demo](https://zk4bucket.oss-cn-beijing.aliyuncs.com/uPic/demo.gif)
@@ -14,11 +16,8 @@ The simplest, yet powerful autocomplete tool for command line with fzf.
 2. Install [bat](https://github.com/sharkdp/bat) for colorize. 
 3. Set ${pwd}/action/bin in your PATH, you are ready to go.
 
-Mac Tips:
-``` bash
-brew install fzf
-brew install bat
-```
+
+
 # Make your own action
 
 1. Fork this repo.
@@ -31,7 +30,7 @@ util/base.sh supplies some useful wrapper funtion for common bash usage.  EX: co
 
 
 
-Ex: The simplest ftp script in actions/ftp.sh
+Ex: The simplest script demo, check out actions/python ftp.sh
 
 ``` bash
 #!/bin/bash
@@ -68,3 +67,13 @@ du -h -d 2 $directory | gsort -h
 ```
 
 ![2022-10-07 12.01.35](https://zk4bucket.oss-cn-beijing.aliyuncs.com/uPic/2022-10-07%2012.01.35.gif)
+
+
+
+## Tips
+
+Variable could be input typing, also could be fzf list or any other source. Use you imagination.
+
+## Similar tools
+
+[beavr](https://github.com/denisidoro/beavr), [bro](https://github.com/hubsmoke/bro), [cheat](https://github.com/cheat/cheat), [cheat.sh](https://github.com/chubin/cheat.sh), [cmdmenu](https://github.com/amacfie/cmdmenu), [eg](https://github.com/srsudar/eg), [how2](https://github.com/santinic/how2), [howdoi](https://github.com/gleitz/howdoi)  [tldr](https://github.com/tldr-pages/tldr), [navi](https://github.com/denisidoro/navi)
