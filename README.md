@@ -2,28 +2,26 @@
 <p align="center" width="100%">
 <img src="https://see.fontimg.com/api/renderfont4/514Pa/eyJyIjoiZnMiLCJoIjoxMTYsInciOjEwMDAsImZzIjoxMTYsImZnYyI6IiNERjE2REUiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/YWN0aW9u/crescendo.png" alt="Art Deco fonts"> 
 </p>
+The simplest, yet powerful autocomplete tool for command line with fzf. 
 
-The simplest, yet powerful autocomplete tool for command line with fzf
+
 
 ![demo](https://zk4bucket.oss-cn-beijing.aliyuncs.com/uPic/demo.gif)
 
 
-# how to use 
-1. chanage the path below point to your local reposiotry of `action`
-2. put ${pwd}/bin/action in your PATH 
-``` bash
-#!/bin/bash
-```
+# How to use 
+1. Install [fzf](https://github.com/junegunn/fzf) first. 
+2. Set ${pwd}/action/bin in your PATH, you are ready to go.
 
-4. You are ready to go
+# Make your own action
 
-# make your own action
+1. Fork this repo.
 
-Pure code logic. code anything in any language you want, put them in snippets if you like.
+2. Code some script in any language you want, put them in ${pwd}/actions/.
 
 
-## write an action
-core/.base.sh supply some simple funtion for common bash usage. you can check out the demo sh file.
+## Write an action in sh 
+util/base.sh supplies some useful wrapper funtion for common bash usage.  EX: color ouput ,easy input.
 
 
 
