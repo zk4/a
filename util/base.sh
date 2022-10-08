@@ -69,7 +69,7 @@ On_IYellow='\033[0;103m'  # Yellow
 On_IBlue='\033[0;104m'    # Blue
 On_IPurple='\033[0;105m'  # Purple
 On_ICyan='\033[0;106m'    # Cyan
-On_IWhite='\033[0;107m'   # White
+On_IWhite=''   # White
 
 # 快速打印颜色
 green(){
@@ -114,12 +114,27 @@ fzf_input(){
   $@ | fzf --header=$title --header-first
 }
 
+# generate random image file
 gen_random_img(){
   if [ $1 ]
   then
     mx=320;my=256;head -c "$((3*mx*my))" /dev/urandom | convert -depth 8 -size "${mx}x${my}" RGB:- "$1"
   else
-     echo "请输入图片文件名"
+     red "请输入图片文件名"
      exit
   fi
 }
+
+
+# check if command exist
+# use $? for return
+if_program_exist(){
+  if [ $1 ]
+  then
+    command -v proxychains4 &> /dev/null
+  else
+     red "please set the program name you want to check"
+     exit
+  fi
+}
+
