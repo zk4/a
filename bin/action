@@ -7,7 +7,9 @@ SCRIPT_DIR=`dirname $(readlink $0)`
 # make snippets folder path
 ACTIONS_FOLDER=$SCRIPT_DIR/../actions/
 
+# TODO: using the folder to categorize, is it useful?
 # find $ACTIONS_FOLDER -name \*.sh -print 
+
 "$ACTIONS_FOLDER$(ls $ACTIONS_FOLDER |  fzf --ansi -q "$1" --height 40%    --preview "bat --style=numbers --color=always --line-range :500 $ACTIONS_FOLDER{}")" 
 
 

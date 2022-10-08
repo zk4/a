@@ -1,24 +1,30 @@
 #!/bin/bash
 
 set -x
+green "start minikube"
 minikube start --cpus=4 --memory='6000mb' --image-mirror-country='cn' --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers'
 
-# check if ok
+ 
+green "check status"
 minikube status
 
 
-# check addons 
+green "check addons"
 minikube addons list
 
 
 
-# check context
+green "check context"
 kubectl config get-contexts
-
 kubectl get no
 
-# check cluster info 
+green "cluster info"
 kubectl cluster-info
 
 # 罗列某名称空间的 serect 
+green "cluster info"
 kubectl get  secret -n kubernetes-dashboard
+
+
+
+kubectl dashboard
