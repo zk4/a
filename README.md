@@ -30,7 +30,7 @@ Have fun with the built-in actions
 
 1. Fork this repo.
 
-2. Code some script in any language you want, put them in ${pwd}/actions/.
+2. Code some script in any language you want, put them in ${pwd}/actions/. Or you can use the action to create the action. `action | create action.sh`.
 
 3. chmod the file, done.
 
