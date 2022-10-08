@@ -1,4 +1,6 @@
 #!/bin/bash
+
+source "$(dirname "$0")/../util/base.sh"
 # -------------------------------------------
 
 set -x
@@ -16,11 +18,14 @@ fi
 # setup 
 picgo set uploader
 
+
+# show config 
+cat ~/.picgo/config.json
 # test upload
   # generate random image
-  mx=320;my=256;head -c "$((3*mx*my))" /dev/urandom | convert -depth 8 -size "${mx}x${my}" RGB:- random.png
+  gen_random_img "random22.png"
   # upload
-  picgo upload random.png
+  picgo upload random22.png
   # clean up 
-  rm random.png
+  rm "random22.png"
 

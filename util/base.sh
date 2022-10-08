@@ -113,3 +113,13 @@ fzf_input(){
   shift 1
   $@ | fzf --header=$title --header-first
 }
+
+gen_random_img(){
+  if [ $1 ]
+  then
+    mx=320;my=256;head -c "$((3*mx*my))" /dev/urandom | convert -depth 8 -size "${mx}x${my}" RGB:- "$1"
+  else
+     echo "请输入图片文件名"
+     exit
+  fi
+}
