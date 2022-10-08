@@ -121,6 +121,9 @@ localBranch="${localBranch/#\~/$HOME}"
 remoteBranch=`fzf_input "远程分支名" git branch -r`
 ```
 
+## TODO
+- [ ] Install action with curl
+- [ ] More source support other than the actions folder
 
 
 ## Similar tools
