@@ -3,7 +3,7 @@ source "$(dirname "$0")/../util/base.sh"
 
 emptyfolder=$(simple_input "git clone to emptyfolder:") 
 mkdir -p $emptyfolder
-git clone git@github.com:spring2go/spring-petclinic-msa.git $emptyfolder
+git clone git@github.com:zk4/spring-petclinc-k8s-circleci.git $emptyfolder
 
 kubectl apply -f  $emptyfolder/k8s/local
 
