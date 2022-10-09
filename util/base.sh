@@ -125,7 +125,34 @@ gen_random_img(){
   fi
 }
 
+# demo:
+# ask "hello"
+# ret=$?
+#
+# if [ $ret -eq 0 ]; then
+#     echo "n"
+# else
+#     echo "y"
+# fi
+ask() {
+  while true; do
+    read -p "$1 ([y]/n) " -r
+    REPLY=${REPLY:-"y"}
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+      return 1
+    elif [[ $REPLY =~ ^[Nn]$ ]]; then
+      return 0
+    fi
+  done
+}
 
+mac_only(){
+archi=$(uname -sm)
+case "$archi" in
+  Darwin\ x86_64)  echo "found mac x86_64"     ;;
+  *) exit ;;
+esac
+}
 # check if command exist
 # use $? for return
 if_program_exist(){
@@ -138,3 +165,19 @@ if_program_exist(){
   fi
 }
 
+wait_url_and_open(){
+  if [ $1 ]
+  then
+      until curl -s -f -o /dev/null $1
+      do
+        green "wait 1 sec.."
+        sleep 1
+      done
+
+      open $1
+  else
+     red "please specify checked url"
+     exit
+  fi
+
+}

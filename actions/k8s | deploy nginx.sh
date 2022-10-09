@@ -16,11 +16,4 @@ kubectl apply -f "$(dirname "$0")"/k8s_config/nginx/svc.yml
 
 # kubectl get deploy -o wide
 
-# retry 
-until curl -s -f -o /dev/null "http://`minikube ip`:30080/"
-do
-  sleep 1
-done
-
-open "http://`minikube ip`:30080/"
-
+wait_url_and_open "http://`minikube ip`:30080/"
