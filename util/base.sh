@@ -125,6 +125,26 @@ gen_random_img(){
   fi
 }
 
+# demo:
+# ask "hello"
+# ret=$?
+#
+# if [ $ret -eq 0 ]; then
+#     echo "n"
+# else
+#     echo "y"
+# fi
+ask() {
+  while true; do
+    read -p "$1 ([y]/n) " -r
+    REPLY=${REPLY:-"y"}
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+      return 1
+    elif [[ $REPLY =~ ^[Nn]$ ]]; then
+      return 0
+    fi
+  done
+}
 
 # check if command exist
 # use $? for return
