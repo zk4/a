@@ -165,3 +165,19 @@ if_program_exist(){
   fi
 }
 
+wait_url_and_open(){
+  if [ $1 ]
+  then
+      until curl -s -f -o /dev/null $1
+      do
+        green "wait 1 sec.."
+        sleep 1
+      done
+
+      open $1
+  else
+     red "please specify checked url"
+     exit
+  fi
+
+}
