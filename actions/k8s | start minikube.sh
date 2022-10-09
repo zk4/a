@@ -1,16 +1,6 @@
 #!/bin/bash
 source "$(dirname "$0")/../util/base.sh"
 
-# set -x
-ask "是否下载?"
-needDownload=$?
-ret=$?
-
-if [ $ret -eq 1 ]; then
-  proxychains4 brew install minikube
-  brew link --overwrite minikube
-fi
-
 green "start minikube"
 # minikube start --cpus=4 --memory='6000mb' --image-mirror-country='cn' --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers' --vm-driver=hyperkit
 minikube start --cpus=2 --memory='4000mb' --vm-driver=hyperkit
