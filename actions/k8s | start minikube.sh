@@ -12,7 +12,8 @@ if [ $ret -eq 1 ]; then
 fi
 
 green "start minikube"
-minikube start --cpus=4 --memory='6000mb' --image-mirror-country='cn' --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers' --driver=hyperkit
+# minikube start --cpus=4 --memory='6000mb' --image-mirror-country='cn' --image-repository='registry.cn-hangzhou.aliyuncs.com/google_containers' --vm-driver=hyperkit
+minikube start --cpus=2 --memory='4000mb' --vm-driver=hyperkit
 
  
 green "check status"

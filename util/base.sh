@@ -146,6 +146,13 @@ ask() {
   done
 }
 
+mac_only(){
+archi=$(uname -sm)
+case "$archi" in
+  Darwin\ x86_64)  echo "found mac x86_64"     ;;
+  *) exit ;;
+esac
+}
 # check if command exist
 # use $? for return
 if_program_exist(){
