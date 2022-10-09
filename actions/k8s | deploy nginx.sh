@@ -19,6 +19,7 @@ kubectl apply -f "$(dirname "$0")"/k8s_config/nginx/svc.yml
 # retry 
 until curl -s -f -o /dev/null "http://`minikube ip`:30080/"
 do
+  green "sleep 1 sec.."
   sleep 1
 done
 
