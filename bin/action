@@ -2,7 +2,7 @@
 
 
 # get current script folder 
-SCRIPT_DIR=`dirname $(readlink $0)`
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # make snippets folder path
 ACTIONS_FOLDER=$SCRIPT_DIR/../actions/
