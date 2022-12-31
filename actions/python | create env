@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+source "$(dirname "$0")/../util/base.sh"
+
+
+python3 -m venv .p3env
