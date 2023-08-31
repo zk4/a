@@ -16,10 +16,12 @@ autosrc_enter() {
 	    echo ""
 	else
 	    conda create -y -n "\$environment_name" python=$pversion
+			conda activate \$environment_name
+			conda install pip -y
+			pip install pynvim
 	fi
 
 	conda activate \$environment_name
-  	echo "activate"
 }
 
 autosrc_exit() {
