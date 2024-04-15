@@ -32,5 +32,7 @@ EOF
 
 # Write the text to .autosrc
 echo "$autosrc_text" > ./.autosrc
+source ./.autosrc
+autosrc_enter
 
 echo "Text written to .autosrc"
